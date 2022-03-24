@@ -1,27 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Hello, world!</title>
+  
+  </head>
+  <body>
+  
+  
+  
+  
+  
+
 <div style="position: relative; width: 100%; height: 0; padding-top: 129.4118%;
- padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE76NRwzW4&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
+padding-bottom: 48px; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+border-radius: 8px; will-change: transform;">
+ <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+   src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE76NRwzW4&#x2F;view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+ </iframe>
 </div>
 
 <iframe id="forPostyouradd" width="1349" height="600" src="https://www.youtube.com/embed/qObSFfdfe7I" frameborder="0" allowfullscreen></iframe>
 
-<header class="header-image">
-    <div class="headline" style="height: 850px;">
-
-        <div class="container">
-            <h2 style="padding-bottom: 20px;">Technology woven in.</h2>
-            <button class="centerButton" onclick="postYourAdd()">Play Film</button>
-
-        </div>
-
-        <video autoplay loop controls muted id="bgvid">
-            <source src="video/Jacquard.mp4" type="video/mp4">
-        </video>
-
-    </div>
-</header>
 
 <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAE76NRwzW4&#x2F;view?utm_content=DAE76NRwzW4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Currículum Profesional</a> de Isaí Vilches
+
+  
+  
+  
+  
+  
+    <h1>On page load show Modal Popup !</h1>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <video id="" width="100%" controls poster="video/thumb.jpg">
+              <source src="video/Login_via_Lynda_dot_com.mp4" type="video/mp4">
+              <source src="video/Login_via_Lynda_dot_com.ogg" type="video/ogg">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://khaalipaper.com/js/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('#exampleModal').modal({
+              show: false
+          }).on('hidden.bs.modal', function(){
+              $(this).find('video')[0].pause();
+          });
+        });
+    </script>
+  </body>
+</html>
